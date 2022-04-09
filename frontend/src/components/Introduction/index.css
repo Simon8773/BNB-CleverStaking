@@ -1,0 +1,135 @@
+.introduction {
+    min-height: 50vh;
+    padding-top: 183px;
+    padding-left: 10px;
+    padding-right: 10px;
+    padding-bottom: 73px;
+    width: auto;
+    max-width: 1170px;
+    margin: auto;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.text-container {
+    padding-right: 15px;
+    padding-left: 15px;
+    padding-bottom: 60px;
+}
+
+.main-title {
+    font-style: normal;
+    font-weight: bold;
+    font-size: 50px;
+    line-height: normal;
+    color: #ffffff;
+    max-width: 505px;
+}
+
+.main-title span {
+    color: #1ef7d6;
+}
+
+.sub-title-main {
+    font-style: normal;
+    font-weight: normal;
+    font-size: 16px;
+    line-height: normal;
+    color: #ffffff;
+    margin: 20px 0 49px;
+}
+
+.sub-title-main span {
+    font-weight: bold;
+}
+
+.right-screen {
+    padding-right: 15px;
+    padding-left: 15px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+}
+
+.block-result {
+    background: #4c249f;
+    border-radius: 60px;
+    padding: 16px 25px;
+    width: fit-content;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 20px;
+}
+
+#totalCurrencyInvested {
+    max-width: 156px;
+}
+
+.result {
+    color: white;
+    margin-right: 18px;
+    margin-top: 0;
+    margin-bottom: 0;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 30px;
+    line-height: normal;
+    text-align: left;
+    word-break: break-all;
+    max-width: 135px;
+    height: 36px;
+    overflow: hidden;
+}
+
+.sub-text-result {
+    color: white;
+    font-size: 14px;
+    width: fit-content;
+    max-width: 95px;
+}
+
+.bold-text {
+    font-weight: bold;
+}
+
+@media (max-width: 869px) {
+    .right-screen {
+        display: flex;
+        flex-direction: row;
+        gap: 10px;
+        align-items: flex-start;
+        flex-wrap: wrap;
+    }
+    .block-result {
+        margin-bottom: 0;
+    }
+    .block-result:first-child {
+        margin-right: 20px;
+        margin-bottom: 20px;
+    } 
+}
+
+@media (max-width: 611px) {
+    .block-result:first-child {
+        margin-right: 0px;
+    }
+}
+
+@media (max-width: 632px) {
+    .introduction {
+        justify-content: flex-start;
+    }
+}
+
+@media (max-width: 545px) {
+    .main-title {
+        font-size: 36px;
+    }
+    .introduction {
+        padding: 30px 10px;
+        margin-top: 88px;
+    }
+}

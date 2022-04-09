@@ -1,0 +1,250 @@
+.footer {
+    min-height: 46px;
+    position: relative;
+    padding: 23px 0 31px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.footer-links {
+    display: flex;
+    align-items: center;
+    width: calc(100% - 40px);
+    max-width: 1170px;
+    margin-bottom: 30px;
+    padding: 20px;
+}
+
+@media (max-width: 585px) {
+    .footer-links {
+        flex-direction: column;
+        gap: 20px;
+    }
+}
+
+.footer:before {
+    content: "";
+    position: absolute;
+    height: 1px;
+    left: 0;
+    right: 0;
+    top: 0;
+    border-radius: 100%;
+    background: linear-gradient(266.61deg, #4c249f -1.47%, #ffffff 46.7%, #4c249f 99.87%);
+}
+
+.btns-more {
+    display: flex;
+    width: 180px;
+    justify-content: space-around;
+}
+
+.modalWrapper {
+    position: fixed;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    top: 0;
+    background: rgba(0, 0, 0, 0.8);
+    z-index: 10000;
+    transition: 0.3s;
+}
+
+.modal {
+    height: auto;    
+    max-height: 80%;
+    max-width: 1170px;
+    margin: 0 auto;
+}
+
+.content {
+    padding: 17px 25px 25px 25px;
+}
+
+.closeWindow {
+    position: absolute;
+    width: 43px;
+    height: 43px;
+    background: url(../../assets/X.svg) no-repeat;
+    background-size: contain;
+    box-sizing: border-box;
+    border-radius: 100%;
+    border: none;
+    top: -50px;
+    right: -50px;
+    cursor: pointer;
+}
+
+.modal-header {
+    margin: 0 auto;
+}
+
+.title-window {
+    text-align: center;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 36px;
+    line-height: normal;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: #ffffff;
+    margin-bottom: 62px;
+}
+
+.list-faq {
+    background-color: white;
+    border-radius: 30px;
+    padding: 20px;
+    list-style: none;
+    margin: 0;
+    margin-bottom: 40px;
+}
+
+.item-faq::after {
+    content: "";
+    position: absolute;
+    height: 1px;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    border-radius: 100%;
+    background: linear-gradient(266.61deg, #ffffff -1.47%, #20c1b2 100%, #ffffff 100%);
+}
+
+.item-faq:last-child::after {
+    background: none;
+}
+
+.item-faq {
+    padding: 16px 0 16px 0;
+    position: relative; 
+}
+
+.header-item-faq {
+    position: relative;
+    padding-right: 43px;
+}
+
+.close-faq-item {
+    box-sizing: border-box;
+    border-radius: 30px;
+    width: 43px;
+    height: 43px;
+    background: url(../../assets/btn_arrow.svg) no-repeat;
+    border: none;
+    background-size: contain;
+    position: absolute;
+    right: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    transition: 0.3s;
+}
+
+.close-faq-item.active {
+    transform: translateY(-50%) rotate(180deg);
+    transition: 0.3s;
+}
+
+.title-faq-item {
+    font-style: normal;
+    font-weight: bold;
+    font-size: 18px;
+    line-height: normal;
+    color: #000000;
+    margin: 5px;
+}
+
+.container-info-faq {
+    height: 0;
+    animation: slideout 0.3s forwards;
+    overflow: hidden;
+}
+
+.container-info-faq.active {
+    animation: slidein 0.3s forwards;
+}
+
+@keyframes slidein {
+  from {
+    visibility: visible;
+    height: 0;
+  }
+
+  to {
+    height: auto;
+  }
+}
+
+
+
+@keyframes slideout {
+  from {
+    visibility: visible;
+    height: auto;
+  }
+
+  to {
+    height: 0;
+  }
+}
+
+.container-info-faq p {
+    font-style: normal;
+    font-weight: normal;
+    font-size: 12px;
+    line-height: normal;
+    color: #303030;
+    margin-bottom: 15px;
+    padding-right: 50px;
+    padding-left: 7px;
+}
+
+@media (max-width: 1440px) {
+    .title-window {
+        font-size: 30px;
+    }
+
+    .title-faq-item {
+        font-size: 16px;
+    }
+
+    .close-faq-item {
+        width: 30px;
+        height: 30px;
+    }
+
+    .closeWindow {
+        width: 30px;
+        height: 30px;
+        right: -30px;
+    }
+}
+
+@media (max-width: 768px) {
+    .modal {
+        width: 87%;
+        max-height: 90%;
+    }
+
+    .content {
+        padding: 10px 15px;
+    }
+
+    .item-faq {
+        padding: 7px 0 7px 0;
+    }
+
+    .header-item-faq {
+        padding-right: 0;
+    }
+
+    .close-faq-item {
+        display: none;
+    }
+
+    .closeWindow {
+        right: -20px;
+        top: -20px;
+    }
+}
